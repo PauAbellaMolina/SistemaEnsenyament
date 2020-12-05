@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-custom-navbar shadow-sm">
             <div class="container">
                 <a class="navbar-brand logo" href="{{ url('/') }}">
-                    {{ config('app.name', 'PadawanProjectManager') }}
+                    {{ config('app.name', 'Sistema Ensenyament') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -46,11 +46,11 @@
                             <li class="nav-item">
                                 <a class="nav-link coloured customLink" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            {{-- @if (Route::has('register'))
+                            @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link coloured" href="{{ route('register') }}">{{ __('Registrar') }}</a>
+                                    <a class="nav-link coloured customLink" href="{{ route('register') }}">{{ __("Registra't") }}</a>
                                 </li>
-                            @endif --}}
+                            @endif
                         @else
                             <li class="nav-item">
                                 <a class="dropdown-item-custom coloured customLink" href="{{ route('logout') }}"

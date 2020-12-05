@@ -26,6 +26,15 @@ class AlumnesController extends Controller
             return response()->json(['status' => 0, 'alumnes' => []], 500);
         }
     }
+    //Get user by nom
+    public function getAlumnesNom($nom) {
+        try{
+            $alumnes = Alumne::with('ensenyament')->with('centre')->where('nom', '=', $nom)->get();
+            return response()->json(['status' => 1, 'alumnes' => $alumnes]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'alumnes' => []], 500);
+        }
+    }
     //Get alumnes by centre id
     public function getAlumnesCentreId($centre_id) {
         try{

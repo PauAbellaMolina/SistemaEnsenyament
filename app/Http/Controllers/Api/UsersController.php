@@ -30,9 +30,9 @@ class UsersController extends Controller
         }
     }
     //Get user by nombre
-    public function getUserNombre($nombre) {
+    public function getUserNom($nom) {
         try{
-            $users = User::where('nombre', '=', $nombre)->get();
+            $users = User::where('nom', '=', $nom)->get();
             return response()->json(['status' => 1, 'users' => $users]);
         } catch(\Exception $e) {
             return response()->json(['status' => 0, 'users' => []], 500);
@@ -52,9 +52,9 @@ class UsersController extends Controller
     public function newUser(Request $request) {
         try{
             $user = new User;
-            $user->nombre = $request->nombre;
-            $user->apellidos = $request->apellidos;
-            $user->fecha_nacimiento = $request->fecha_nacimiento;
+            $user->nom = $request->nom;
+            $user->cognoms = $request->cognoms;
+            $user->data_naixement = $request->data_naixement;
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
             $user->url_foto = $request->url_foto;
@@ -73,9 +73,9 @@ class UsersController extends Controller
     public function editUserId($id, Request $request) {
         try{
             $user = $request->user()->findOrFail($id);
-            $user->nombre = $request->nombre;
-            $user->apellidos = $request->apellidos;
-            $user->fecha_nacimiento = $request->fecha_nacimiento;
+            $user->nom = $request->nom;
+            $user->cognoms = $request->cognoms;
+            $user->data_naixement = $request->data_naixement;
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
             $user->url_foto = $request->url_foto;

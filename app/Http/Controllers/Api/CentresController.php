@@ -12,27 +12,45 @@ class CentresController extends Controller
     public function getCentres() {
         try{
             $centre = Centre::all();
-            return response()->json(['status' => 1, 'centre' => $centre]);
+            return response()->json(['status' => 1, 'centres' => $centre]);
         } catch(\Exception $e) {
-            return response()->json(['status' => 0, 'centre' => []], 500);
+            return response()->json(['status' => 0, 'centres' => []], 500);
         }
     }
-    //Get all centres with its alumnes
-    public function getCentresAlumnes() {
+    //Get centre by id with its alumnes
+    public function getCentresAlumnes($id) {
         try{
-            $centre = Centre::with('alumnes')->get();
-            return response()->json(['status' => 1, 'centre' => $centre]);
+            $centre = Centre::where('id', '=', $id)->with('alumnes')->get();
+            return response()->json(['status' => 1, 'centres' => $centre]);
         } catch(\Exception $e) {
-            return response()->json(['status' => 0, 'centre' => []], 500);
+            return response()->json(['status' => 0, 'centres' => []], 500);
         }
     }
     //Get centre by id
     public function getCentresId($id) {
         try{
             $centre = Centre::findOrFail($id);
-            return response()->json(['status' => 1, 'centre' => $centre]);
+            return response()->json(['status' => 1, 'centres' => $centre]);
         } catch(\Exception $e) {
-            return response()->json(['status' => 0, 'centre' => []], 500);
+            return response()->json(['status' => 0, 'centres' => []], 500);
+        }
+    }
+    //Get centres by nom
+    public function getCentresNom($nom) {
+        try{
+            $centres = Centre::where('nom', '=', $nom)->get();
+            return response()->json(['status' => 1, 'centres' => $centres]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'centres' => []], 500);
+        }
+    }
+    //Get centres by nom
+    public function getCentresPoblacio($nom) {
+        try{
+            $centres = Centre::where('poblacio', '=', $nom)->get();
+            return response()->json(['status' => 1, 'centres' => $centres]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'centres' => []], 500);
         }
     }
 

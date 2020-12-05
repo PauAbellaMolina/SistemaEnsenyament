@@ -111,7 +111,7 @@
                         <a class="customLink" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a class="customLink" href="{{ route('register') }}">Registra't</a>
                         @endif
                     @endauth
                 </div>

@@ -72,3 +72,19 @@ Route::get('/centres/edit/{id_centre}', 'Front\CentresController@editCentre')->n
 Route::post('/centres/edit/post/{id_centre}', 'Front\CentresController@editCentrePost')->name('centres/edit/post');
 //Delete
 Route::get('/centres/delete/{id_centre}', 'Front\CentresController@deleteCentre');
+
+/* ENSENYAMENTS */
+//Gets
+Route::get('/ensenyaments', 'Front\EnsenyamentsController@index')->name('ensenyaments');
+Route::post('/ensenyaments/id', 'Front\EnsenyamentsController@ensenyamentsId')->name('ensenyaments/id');
+Route::post('/ensenyaments/nom', 'Front\EnsenyamentsController@ensenyamentsNom')->name('ensenyaments/nom');
+//Details page
+Route::get('/ensenyaments/details/{id_ensenyament}', 'Front\EnsenyamentsController@detailsEnsenyament')->name('ensenyaments/details');
+//New alumne
+Route::get('/ensenyaments/nou', 'Front\EnsenyamentsController@nouEnsenyament')->name('ensenyaments/nou');
+Route::post('/ensenyaments/nou/post', 'Front\EnsenyamentsController@nouEnsenyamentPost')->name('ensenyaments/nou/post');
+//Edit
+Route::get('/ensenyaments/edit/{id_ensenyament}', 'Front\EnsenyamentsController@editEnsenyament')->name('ensenyaments/edit');
+Route::post('/ensenyaments/edit/post/{id_ensenyament}', 'Front\EnsenyamentsController@editEnsenyamentPost')->name('ensenyaments/edit/post');
+//Delete
+Route::get('/ensenyaments/delete/{id_ensenyament}', 'Front\EnsenyamentsController@deleteEnsenyament');

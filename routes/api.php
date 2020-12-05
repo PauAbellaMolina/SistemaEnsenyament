@@ -60,8 +60,9 @@ Route::group(['middleware' => 'auth:api'], function() {
 
     //CRUD Ensenyaments
     Route::get('get-ensenyaments', 'Api\EnsenyamentsController@getEnsenyaments');
-    Route::get('get-ensenyaments-alumnes', 'Api\EnsenyamentsController@getEnsenyamentsAlumnes');
+    Route::get('get-ensenyaments-alumnes/{id}', 'Api\EnsenyamentsController@getEnsenyamentsAlumnes');
     Route::get('get-ensenyaments/{id}', 'Api\EnsenyamentsController@getEnsenyamentsId');
+    Route::get('get-ensenyaments/nom/{nom}', 'Api\EnsenyamentsController@getEnsenyamentsNom');
     //New Ensenyament
     Route::post('new-ensenyament', 'Api\EnsenyamentsController@newEnsenyament');
     //Edit Ensenyament

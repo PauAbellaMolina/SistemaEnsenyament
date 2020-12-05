@@ -22,8 +22,9 @@ window.Vue = require('vue');
 
 Vue.component('usuari-component', require('./components/UsuariComponent.vue').default);
 Vue.component('alumne-component', require('./components/AlumneComponent.vue').default);
-Vue.component('alumne-centre-component', require('./components/AlumneCentreComponent.vue').default);
+Vue.component('alumne-embed-component', require('./components/AlumneEmbedComponent.vue').default);
 Vue.component('centre-component', require('./components/CentreComponent.vue').default);
+Vue.component('ensenyament-component', require('./components/EnsenyamentComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

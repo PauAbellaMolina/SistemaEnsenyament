@@ -18,7 +18,6 @@
                         <form class="mt-1" method="POST" action="{{route('alumnes/nom')}}">
                             {{ csrf_field() }}
                             <input class="customInputFiltro" type="text" name="nom" value="" required placeholder="Nom de l'alumne" />
-                            {{-- <input class="customInputFiltro" type="text" name="cognoms" value="" required placeholder="Cognoms de l'alumne" /> --}}
                             <input class="customSubmitFiltro btn btn-primary ml-2" type="submit" value="Filtrar"/>
                         </form>
                         <form class="mt-1" method="POST" action="{{route('alumnes/centre')}}">
@@ -43,7 +42,6 @@
                             <p class="col-md-1">Nom</p>
                             <p class="col-md-2">Cognoms</p>
                             <p class="col-md-2">Data naixement</p>
-                            {{-- <p class="col-md-2">URL Foto</p> --}}
                             <p class="col-md-2">Centre</p>
                             <p class="col-md-3">Ensenyament</p>
                             <p class="col-md-1">Accions</p>

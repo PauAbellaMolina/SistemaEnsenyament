@@ -4,7 +4,7 @@
 <div id="productos" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1 class="title">Detalls del Centre amb ID {{request()->route()->parameters()['id_centre']}}</h1>
+            <h1 class="title">Detalls de l'Ensenyament amb ID {{request()->route()->parameters()['id_ensenyament']}}</h1>
             <hr/>
             <div class="container">
                 <div class="d-flex flex-row justify-content-between">
@@ -12,17 +12,14 @@
                         <h3><strong>Nom:</strong></h3>
                         <h4>{{$response[0]['nom']}}</h4>
 
-                        <h3 class="mt-3"><strong>Direcció:</strong></h3>
-                        <h4>{{$response[0]['direccio']}}</h4>
+                        <h3 class="mt-3"><strong>Descripció:</strong></h3>
+                        <h4>{{$response[0]['descripcio']}}</h4>
 
-                        <h3 class="mt-3"><strong>Població:</strong></h3>
-                        <h4>{{$response[0]['poblacio']}}</h4>
-
-                        <h3 class="mt-4"><a class="coloured customLink" href="{{route('centres/edit', ['id_centre' => $response[0]['id']])}}">Editar centre</a></h3>
+                        <h3 class="mt-4"><a class="coloured customLink" href="{{route('ensenyaments/edit', ['id_ensenyament' => $response[0]['id']])}}">Editar ensenyament</a></h3>
                     </div>
                 </div>
                 <div class="mt-5 col-md-12">
-                    <h3><strong>Alumnes del {{$response[0]['nom']}}:</strong></h3>
+                    <h3><strong>Alumnes matriculats a {{$response[0]['nom']}}:</strong></h3>
                     <div class="card-header d-flex flex-row font-weight-bolder coloured mt-3">
                         <p class="idCol col-auto">ID</p>
                         <p class="col-md-2">Nom</p>

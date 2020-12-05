@@ -12,27 +12,36 @@ class EnsenyamentsController extends Controller
     public function getEnsenyaments() {
         try{
             $ensenyament = Ensenyament::all();
-            return response()->json(['status' => 1, 'ensenyament' => $ensenyament]);
+            return response()->json(['status' => 1, 'ensenyaments' => $ensenyament]);
         } catch(\Exception $e) {
-            return response()->json(['status' => 0, 'ensenyament' => []], 500);
+            return response()->json(['status' => 0, 'ensenyaments' => []], 500);
         }
     }
     //Get all ensenyaments with its alumnes
-    public function getEnsenyamentsAlumnes() {
+    public function getEnsenyamentsAlumnes($id) {
         try{
-            $alumnes = Ensenyament::with('alumnes')->get();
-            return response()->json(['status' => 1, 'alumnes' => $alumnes]);
+            $ensenyament = Ensenyament::where('id', '=', $id)->with('alumnes')->get();
+            return response()->json(['status' => 1, 'ensenyaments' => $ensenyament]);
         } catch(\Exception $e) {
-            return response()->json(['status' => 0, 'alumnes' => []], 500);
+            return response()->json(['status' => 0, 'ensenyaments' => []], 500);
         }
     }
     //Get ensenyament by id
     public function getEnsenyamentsId($id) {
         try{
             $ensenyament = Ensenyament::findOrFail($id);
-            return response()->json(['status' => 1, 'ensenyament' => $ensenyament]);
+            return response()->json(['status' => 1, 'ensenyaments' => $ensenyament]);
         } catch(\Exception $e) {
-            return response()->json(['status' => 0, 'ensenyament' => []], 500);
+            return response()->json(['status' => 0, 'ensenyaments' => []], 500);
+        }
+    }
+        //Get ensenyament by nom
+    public function getEnsenyamentsNom($nom) {
+        try{
+            $ensenyament = Ensenyament::where('nom', '=', $nom)->get();
+            return response()->json(['status' => 1, 'ensenyaments' => $ensenyament]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'ensenyaments' => []], 500);
         }
     }
 

@@ -1,6 +1,6 @@
 <template>
     <div class="card mb-1">
-        <div id="usuariosCards" class="card-body d-flex flex-row">
+        <div id="usuarisCards" class="card-body d-flex flex-row">
             <p class="idCol col-auto">{{user.id}}</p>
             <span></span>
             <p class="col-md-2">{{user.nom}}</p>

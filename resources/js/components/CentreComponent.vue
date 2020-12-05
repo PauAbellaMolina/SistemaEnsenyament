@@ -1,6 +1,6 @@
 <template>
     <div class="card mb-1">
-        <div id="productosCards" class="card-body d-flex flex-row">
+        <div id="elementCards" class="card-body d-flex flex-row">
             <p class="idCol col-auto">{{centre.id}}</p>
             <span></span>
             <p class="col-md-4">{{centre.nom}}</p>

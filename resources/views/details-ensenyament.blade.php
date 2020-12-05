@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @extends('layouts.sidemenu')
 @section('main')
-<div id="productos" class="container py-4 text-start">
+<div id="element" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <h1 class="title">Detalls de l'Ensenyament amb ID {{request()->route()->parameters()['id_ensenyament']}}</h1>

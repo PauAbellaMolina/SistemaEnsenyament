@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @extends('layouts.sidemenu')
 @section('main')
-<div id="usuarios" class="container py-4 text-start">
+<div id="usuaris" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <h1 class="title">Usuaris del sistema</h1>

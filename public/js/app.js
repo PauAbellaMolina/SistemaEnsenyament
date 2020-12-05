@@ -38459,7 +38459,7 @@ var render = function() {
       "div",
       {
         staticClass: "card-body d-flex flex-row",
-        attrs: { id: "productosCards" }
+        attrs: { id: "elementCards" }
       },
       [
         _c("p", { staticClass: "idCol col-auto" }, [
@@ -38711,7 +38711,7 @@ var render = function() {
       "div",
       {
         staticClass: "card-body d-flex flex-row",
-        attrs: { id: "productosCards" }
+        attrs: { id: "elementCards" }
       },
       [
         _c("p", { staticClass: "idCol col-auto" }, [
@@ -38901,7 +38901,7 @@ var render = function() {
       "div",
       {
         staticClass: "card-body d-flex flex-row",
-        attrs: { id: "productosCards" }
+        attrs: { id: "elementCards" }
       },
       [
         _c("p", { staticClass: "idCol col-auto" }, [
@@ -39091,7 +39091,7 @@ var render = function() {
       "div",
       {
         staticClass: "card-body d-flex flex-row",
-        attrs: { id: "productosCards" }
+        attrs: { id: "elementCards" }
       },
       [
         _c("p", { staticClass: "idCol col-auto" }, [
@@ -39281,7 +39281,7 @@ var render = function() {
       "div",
       {
         staticClass: "card-body d-flex flex-row",
-        attrs: { id: "usuariosCards" }
+        attrs: { id: "usuarisCards" }
       },
       [
         _c("p", { staticClass: "idCol col-auto" }, [

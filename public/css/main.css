@@ -1,0 +1,98 @@
+/* GENERAL */
+.idCol {
+    min-width: 70px;
+}
+
+.fechaCol {
+    min-width: 210px;
+}
+
+.title {
+    color: #edc988 !important;
+    text-shadow: .08em .08em 0 rgba(234, 84, 85, 0.8);
+    font-weight: bold;
+}
+
+.editForm > div {
+    margin-top: 4px;
+}
+
+/* HOME */
+.imgPerfil {
+    width: 250px;
+    border-radius: 30px;
+}
+.imgPerfil:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0 #ea5455;
+}
+
+/* USUARIS */
+#usuaris {
+    color: #eeeeee;
+}
+#usuaris p {
+    text-align: center;
+    margin: 0;
+}
+    #usuaris .short {
+        min-width: 1vw;
+        margin: 0 1em 0 1em;
+    }
+    #usuaris .medium {
+        min-width: 5vw;
+        margin: 0 1em 0 1em;
+    }
+    #usuaris .large {
+        min-width: 10vw;
+        margin: 0 1em 0 1em;
+    }
+    #usuaris .larger {
+        min-width: 15vw;
+        margin: 0 1em 0 1em;
+    }
+
+#usuaris #usuarisCards span {
+    border-right: 1px solid grey;
+}
+
+/* LA RESTA */
+#element {
+    color: #eeeeee;
+}
+#element p {
+    text-align: center;
+    margin: 0;
+}
+    #element .short {
+        width: 50px;
+        margin: 0 1em 0 1em;
+    }
+    #element .medium {
+        width: 100px;
+        margin: 0 1em 0 1em;
+    }
+    #element .large {
+        min-width: 150px;
+        margin: 0 1em 0 1em;
+    }
+    #element .larger {
+        min-width: 310px;
+        margin: 0 1em 0 1em;
+    }
+
+#element #elementCards span {
+    border-right: 1px solid grey;
+}
+/*
+.imgProd {
+    width: 550px;
+    border-radius: 10px;
+}
+.imgProdEdit {
+    width: 300px;
+}
+.imgProd:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0 #ea5455;
+} */

@@ -19,7 +19,7 @@ class UsuarisController extends Controller
     public function index()
     {
         $apiToken = Auth::user()->api_token;
-        $response = Http::withToken($apiToken)->get('http://sistemaensenyament.test/api/get-users')['users'];
+        $response = Http::withToken($apiToken)->get('https://pauabella.dev/SistemaEnsenyament/api/get-users')['users'];
 
         return view('usuaris', compact('response'));
     }
@@ -28,7 +28,7 @@ class UsuarisController extends Controller
         $response=[];
         $id = $request->id;
         $apiToken = Auth::user()->api_token;
-        $responseAux = Http::withToken($apiToken)->get('http://sistemaensenyament.test/api/get-users/'.$id)['users'];
+        $responseAux = Http::withToken($apiToken)->get('https://pauabella.dev/SistemaEnsenyament/api/get-users/'.$id)['users'];
         array_push($response, $responseAux);
 
         return view('usuaris', compact('response'));
@@ -37,7 +37,7 @@ class UsuarisController extends Controller
     {
         $nom = $request->nom;
         $apiToken = Auth::user()->api_token;
-        $response = Http::withToken($apiToken)->get('http://sistemaensenyament.test/api/get-users/nom/'.$nom)['users'];
+        $response = Http::withToken($apiToken)->get('https://pauabella.dev/SistemaEnsenyament/api/get-users/nom/'.$nom)['users'];
 
         return view('usuaris', compact('response'));
     }
@@ -45,7 +45,7 @@ class UsuarisController extends Controller
     {
         $email = $request->email;
         $apiToken = Auth::user()->api_token;
-        $response = Http::withToken($apiToken)->get('http://sistemaensenyament.test/api/get-users/email/'.$email)['users'];
+        $response = Http::withToken($apiToken)->get('https://pauabella.dev/SistemaEnsenyament/api/get-users/email/'.$email)['users'];
         return view('usuaris', compact('response'));
     }
 
@@ -58,7 +58,7 @@ class UsuarisController extends Controller
     {
         $data = $request->request->all();
         $apiToken = Auth::user()->api_token;
-        $post = Http::withToken($apiToken)->post('http://sistemaensenyament.test/api/new-user', $data);
+        $post = Http::withToken($apiToken)->post('https://pauabella.dev/SistemaEnsenyament/api/new-user', $data);
 
         return redirect()->route('usuaris');
     }
@@ -67,7 +67,7 @@ class UsuarisController extends Controller
     public function detailsUsuari($id_user)
     {
         $apiToken = Auth::user()->api_token;
-        $response = Http::withToken($apiToken)->get('http://sistemaensenyament.test/api/get-users/'.$id_user)['users'];
+        $response = Http::withToken($apiToken)->get('https://pauabella.dev/SistemaEnsenyament/api/get-users/'.$id_user)['users'];
 
         return view('details-usuari', compact('response'));
     }
@@ -76,7 +76,7 @@ class UsuarisController extends Controller
     public function editUsuari($id_user)
     {
         $apiToken = Auth::user()->api_token;
-        $response = Http::withToken($apiToken)->get('http://sistemaensenyament.test/api/get-users/'.$id_user)['users'];
+        $response = Http::withToken($apiToken)->get('https://pauabella.dev/SistemaEnsenyament/api/get-users/'.$id_user)['users'];
 
         return view('edit-usuari', compact('response'));
     }
@@ -84,7 +84,7 @@ class UsuarisController extends Controller
     {
         $data = $request->request->all();
         $apiToken = Auth::user()->api_token;
-        $post = Http::withToken($apiToken)->post('http://sistemaensenyament.test/api/edit-user/'.$id_user, $data);
+        $post = Http::withToken($apiToken)->post('https://pauabella.dev/SistemaEnsenyament/api/edit-user/'.$id_user, $data);
 
         return redirect()->route('usuaris');
     }
@@ -93,7 +93,7 @@ class UsuarisController extends Controller
     public function deleteUsuari($id_user)
     {
         $apiToken = Auth::user()->api_token;
-        $response = Http::withToken($apiToken)->delete('http://sistemaensenyament.test/api/delete-user/'.$id_user);
+        $response = Http::withToken($apiToken)->delete('https://pauabella.dev/SistemaEnsenyament/api/delete-user/'.$id_user);
 
         return redirect()->route('usuaris');
     }

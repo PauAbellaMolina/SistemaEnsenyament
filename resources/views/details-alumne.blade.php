@@ -28,7 +28,7 @@
                         <h4>ID {{$response['ensenyament']['id']}}</h4>
                         <h4>{{$response['ensenyament']['nom']}}</h4>
                         <h5 class="text-justify">{{$response['ensenyament']['descripcio']}}</h5>
-                        <a class="customLink mt-1" title="Detalls de l'ensenyament" :href="'/SistemaEnsenyament/ensenyament/details/{{$response['ensenyament_id']}}'">Detalls</a>
+                        <a class="customLink mt-1" title="Detalls de l'ensenyament" :href="'/SistemaEnsenyament/ensenyaments/details/{{$response['ensenyament_id']}}'">Detalls</a>
 
                         <h3 class="mt-4"><a class="coloured customLink" href="{{route('alumnes/edit', ['id_alumne' => $response['id']])}}">Editar alumne</a></h3>
                     </div>

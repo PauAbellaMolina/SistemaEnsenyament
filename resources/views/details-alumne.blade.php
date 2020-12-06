@@ -22,13 +22,13 @@
                         <h4>{{$response['centre']['nom']}}</h4>
                         <h4>{{$response['centre']['direccio']}}</h4>
                         <h4>{{$response['centre']['poblacio']}}</h4>
-                        <a class="customLink mt-1" title="Detalls del centre" :href="'/centres/details/{{$response['centre_id']}}'">Detalls</a>
+                        <a class="customLink mt-1" title="Detalls del centre" :href="{{route('centres/details', ['centre_id' => $response['centre_id']])}}">Detalls</a>
 
                         <h3 class="mt-3"><strong>Ensenyament:</strong></h3>
                         <h4>ID {{$response['ensenyament']['id']}}</h4>
                         <h4>{{$response['ensenyament']['nom']}}</h4>
                         <h5 class="text-justify">{{$response['ensenyament']['descripcio']}}</h5>
-                        <a class="customLink mt-1" title="Detalls de l'ensenyament" :href="'/ensenyament/details/{{$response['ensenyament_id']}}'">Detalls</a>
+                        <a class="customLink mt-1" title="Detalls de l'ensenyament" :href="{{route('ensenyaments/details', ['ensenyament_id' => $response['ensenyament_id']])}}">Detalls</a>
 
                         <h3 class="mt-4"><a class="coloured customLink" href="{{route('alumnes/edit', ['id_alumne' => $response['id']])}}">Editar alumne</a></h3>
                     </div>
